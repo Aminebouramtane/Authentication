@@ -8,7 +8,7 @@
     <title>Login Radius - Signin/Signup</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="{{URL::asset('assets/CSS/style.css')}}">
 </head>
 
 <body>
@@ -58,7 +58,7 @@
             </div>
         </div>
     </div>
-    <script src="assets/JS/main.js"></script>
+    <script src="{{URL::asset('assets/JS/main.js')}}"></script>
 </body>
 
 </html>
