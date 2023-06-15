@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,10 @@ use App\Http\Controllers\RegisterController;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name("index");
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 Route::post("/register",[RegisterController::class ,'register'])->name("register");
+Route::get("/logout",[LogoutController::class ,'logout'])->name("logout");

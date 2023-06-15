@@ -8,5 +8,7 @@
 </head>
 <body>
     <h1>dashboard</h1>
+    
+    <a href="{{route("logout")}}">Logout</a>
 </body>
 </html>
