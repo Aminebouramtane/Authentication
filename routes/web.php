@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,12 +16,21 @@ use App\Http\Controllers\LogoutController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/login', function () {
     return view('index');
-})->name("index");
+})->name("index")->middleware("guest");
+
+Route::get('/', function () {
+    return view('home');
+});
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
-})->name('dashboard');
+})->name('dashboard')->middleware("auth");
 
 Route::post("/register",[RegisterController::class ,'register'])->name("register");
 Route::get("/logout",[LogoutController::class ,'logout'])->name("logout");
+Route::post("/login",[LoginController::class ,'login'])->name("login");
