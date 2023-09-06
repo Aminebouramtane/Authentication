@@ -1,2 +1,2 @@
 # Authentication Laravel
-Authentication manual in laravel
+Authentication manual in laravel stl1
